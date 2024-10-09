@@ -1,6 +1,6 @@
 name: Autograding Tests
 'on':
-- push
+- workflow_dispatch
 - repository_dispatch
 permissions:
   checks: write
@@ -20,8 +20,8 @@ jobs:
         test-name: Lesson_1_test
         setup-command: ''
         command: python3 main.py
-        input: 1+1
-        expected-output: '2'
+        input: 2+4
+        expected-output: '6'
         comparison-method: exact
         timeout: 1
     - name: Autograding Reporter
